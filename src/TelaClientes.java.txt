@@ -1,162 +1,215 @@
+// Mudar nome de todas variaveis em casa
 package Visão;
 
 public class TelaClientes extends javax.swing.JFrame {
 
-    
+
     public TelaClientes() {
         initComponents();
     }
 
-    
+    // Variables declaration - do not modify
+    private jButton adicionar;
+    private jButton buscar1;
+    private jButton editar;
+    private jButton excluir;
+
+    private JLabel nomeTela;
+    private JLabel label1;
+    private JLabel telaPrincipal;
+
+    private JTextField buscar;
+
+    private JSeparator inferior;
+    private JSeparator lateralDireita;
+    private JSeparator lateralEsquerda;
+    private JSeparator miniSuperior;
+    private JSeparator superior;
+
+    private JScrollPane jScrollPane1;
+
+    private JTable jTableClientes;
+// End of variables declaration
+
+
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
-
-        jLabel1 = new javax.swing.JLabel();
-        jLabeNomeTela = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTableClientes = new javax.swing.JTable();
-        jButtonExcluir = new javax.swing.JButton();
-        jButtonAdicionar = new javax.swing.JButton();
-        jButtonBuscar = new javax.swing.JButton();
-        jTextFieldBuscar = new javax.swing.JTextField();
-        jButtonEditar = new javax.swing.JButton();
-        jSeparatorMiniSuperior = new javax.swing.JSeparator();
-        jSeparatorLateralEsquerda = new javax.swing.JSeparator();
-        jSeparatorSuperior = new javax.swing.JSeparator();
-        jSeparatorLateralDireita = new javax.swing.JSeparator();
-        jSeparatorInferior = new javax.swing.JSeparator();
-        jLabelTelaPrincipal = new javax.swing.JLabel();
-
-        jLabel1.setText("jLabel1");
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        
+        // Start layout for backgroun null
         getContentPane().setLayout(null);
+        // End layout
+        
+        // Start adicionar
+        adicionar = new JButton();
+        adicionar.setText("ADICIONAR");
+        getContentPane().add(adicionar);
+        adicionar.setBounds(370, 380, 90, 40);
+        // End adicionar
 
+        // Start buscar
+        buscar = new JButton();
+        buscar.setText("BUSCAR");
+        getContentPane().add(buscar);
+        buscar.setBounds(500, 380, 90, 40);
+        // End buscar
+
+        // Start editar
+        editar = new JButton();
+        editar.setText("EDITAR");
+        getContentPane().add(editar);
+        editar.setBounds(90, 380, 100, 40);
+        // End editar
+
+        // Start excluir
+        excluir = new JButton();
+        excluir.setText("EXCLUIR");
+        getContentPane().add(excluir);
+        excluir.setBounds(230, 380, 90, 40)
+        // End excluir
+
+        // Start nomeTela
+        nomeTela = new JLabel();
+        nomeTela.setText("CLIENTES");
+        getContentPane().add(nomeTela);
+        nomeTela.setBounds(40, 20, 60, 20);
+        // End nomeTela
+
+        // Start jLabel1
+        jLabel1 = new JLabel();
+        jLabel1.setText("jLabel1");
+        // End jLabel1
+
+        // Start buscar
+        buscar = new JTextField();
+        getContentPane().add(buscar);
+        buscar.setBounds(610, 390, 180, 30);
+        // End buscar
+
+        // Start inferior
+        inferior = new JSeparator();
+        getContentPane().add(inferior);
+        inferior.setBounds(20, 360, 830, 20);
+        // End inferior
+
+        // Start lateralDireita
+        lateralDireita = new JSeparator();
+        lateralDireita.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(lateralDireita);
+        lateralDireita.setBounds(850, 30, 10, 330);
+        // End lateralDireita
+
+        // Start lateralEsquerda
+        lateralEsquerda = JSeparator();
+        lateralEsquerda.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(lateralEsquerda);
+        lateralEsquerda.setBounds(20, 30, 10, 330);
+        // End lateralEsquerda
+
+        // Start telaPrincipal
+        telaPrincipal = new JLabel();
+        telaPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela-princiapal.PNG"))); // NOI18N
+        telaPrincipal.setIconTextGap(5);
+        getContentPane().add(telaPrincipal);
+        telaPrincipal.setBounds(0, 0, 860, 458);
+        // End telaPrincipal
+
+        // start miniSuperior
+        miniSuperior = new JSeparator();
+        getContentPane().add(miniSuperior);
+        miniSuperior.setBounds(20, 30, 10, 10);
+        // End miniSuperior
+
+        // Start superior
+        superior = new JSeparator();
+        getContentPane().add(superior);
+        superior.setBounds(90, 30, 760, 10);
+        // End superior
+
+        // Start jScrollPane1
+        jScrollPane1 = new JScrollPane();
+        jScrollPane1.setViewportView(jTableClientes);
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(60, 60, 750, 280);
+        // End jScrollPane1
+
+        // Start 
+        jTableClientes = new JTable();
         jLabeNomeTela.setText("CLIENTES");
         getContentPane().add(jLabeNomeTela);
         jLabeNomeTela.setBounds(40, 20, 60, 20);
+        // End
+        
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTableClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "ID", "Nome", "CPF", "Telefone", "Data de Nascimento"
-            }
-        ));
-        jScrollPane1.setViewportView(jTableClientes);
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null},
+            {null, null, null, null, null}
+        },
+        new String [] {
+            "ID", "Nome", "CPF", "Telefone", "Data de Nascimento"
+        }
+    ));
+        
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(60, 60, 750, 280);
+        ;
 
-        jButtonExcluir.setText("EXCLUIR");
-        getContentPane().add(jButtonExcluir);
-        jButtonExcluir.setBounds(230, 380, 90, 40);
-
-        jButtonAdicionar.setText("ADICIONAR");
-        getContentPane().add(jButtonAdicionar);
-        jButtonAdicionar.setBounds(370, 380, 90, 40);
-
-        jButtonBuscar.setText("BUSCAR");
-        getContentPane().add(jButtonBuscar);
-        jButtonBuscar.setBounds(500, 380, 90, 40);
-        getContentPane().add(jTextFieldBuscar);
-        jTextFieldBuscar.setBounds(610, 390, 180, 30);
-
-        jButtonEditar.setText("EDITAR");
-        getContentPane().add(jButtonEditar);
-        jButtonEditar.setBounds(90, 380, 100, 40);
-        getContentPane().add(jSeparatorMiniSuperior);
-        jSeparatorMiniSuperior.setBounds(20, 30, 10, 10);
-
-        jSeparatorLateralEsquerda.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparatorLateralEsquerda);
-        jSeparatorLateralEsquerda.setBounds(20, 30, 10, 330);
-        getContentPane().add(jSeparatorSuperior);
-        jSeparatorSuperior.setBounds(90, 30, 760, 10);
-
-        jSeparatorLateralDireita.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparatorLateralDireita);
-        jSeparatorLateralDireita.setBounds(850, 30, 10, 330);
-        getContentPane().add(jSeparatorInferior);
-        jSeparatorInferior.setBounds(20, 360, 830, 20);
-
-        jLabelTelaPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela-princiapal.PNG"))); // NOI18N
-        jLabelTelaPrincipal.setIconTextGap(5);
-        getContentPane().add(jLabelTelaPrincipal);
-        jLabelTelaPrincipal.setBounds(0, 0, 860, 458);
+        
 
         pack();
-    }// </editor-fold>                        
-
-    
-    public static void main(String args[]) {
-        
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaClientes().setVisible(true);
-            }
-        });
     }
 
-    // Variables declaration - do not modify                     
-    private javax.swing.JButton jButtonAdicionar;
-    private javax.swing.JButton jButtonBuscar;
-    private javax.swing.JButton jButtonEditar;
-    private javax.swing.JButton jButtonExcluir;
-    private javax.swing.JLabel jLabeNomeTela;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabelTelaPrincipal;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparatorInferior;
-    private javax.swing.JSeparator jSeparatorLateralDireita;
-    private javax.swing.JSeparator jSeparatorLateralEsquerda;
-    private javax.swing.JSeparator jSeparatorMiniSuperior;
-    private javax.swing.JSeparator jSeparatorSuperior;
-    private javax.swing.JTable jTableClientes;
-    private javax.swing.JTextField jTextFieldBuscar;
-    // End of variables declaration                   
+
+    public static void main(String args[]) {
+        
+
+    try {
+    for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+    if ("Nimbus".equals(info.getName())) {
+    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+    break;
+}
+}
+} catch (ClassNotFoundException ex) {
+    java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+} catch (InstantiationException ex) {
+    java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+} catch (IllegalAccessException ex) {
+    java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+} catch (javax.swing.UnsupportedLookAndFeelException ex) {
+    java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+}
+
+java.awt.EventQueue.invokeLater(new Runnable() {
+    public void run() {
+        new TelaClientes().setVisible(true);
+    }
+});
+}
+
 }
