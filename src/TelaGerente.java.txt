@@ -1,103 +1,164 @@
-package Visão;
+// Corrigir ainda 
 
-public class TelaGerente extends javax.swing.JFrame {
+package test;
 
-    public TelaGerente() {
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JSeparator;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
+public class TelaGerent extends javax.swing.JFrame {
+
+    public TelaGerent() {
         initComponents();
     }
+    
+    // Variables declaration   
+    private JButton add;
+    private JButton edit;
+    private JButton delete;
+    
+    private JSeparator upper;
+    private JSeparator upperMinor;
+    private JSeparator leftSide;
+    private JSeparator rightSide;
+    private JSeparator bottom ;
+    
+    private JTextField text;
+    
+    private JLabel title;
+    private JLabel logo;
+    
+    private JScrollPane scrollPanel;
+    private JTable tableGerentes;
+    // End variables declaration 
 
     @SuppressWarnings("unchecked")
     private void initComponents() {
-
-        jLabelNomePrincipal = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTableTabelaGerentes = new javax.swing.JTable();
-        jButtonAdicionar = new javax.swing.JButton();
-        jButtonExcluir = new javax.swing.JButton();
-        jButtonEditar = new javax.swing.JButton();
-        jTextFieldTexto = new javax.swing.JTextField();
-        jSeparatorMiniSuperior = new javax.swing.JSeparator();
-        jSeparatorSuperior = new javax.swing.JSeparator();
-        jSeparatorLateralEsquerda = new javax.swing.JSeparator();
-        jSeparatorInferior = new javax.swing.JSeparator();
-        jSeparatorLateralDireita = new javax.swing.JSeparator();
-        jLabelTelaPrincipal = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+    	
+    	// Start layout null for background image
         getContentPane().setLayout(null);
+    	// End layout
+    	
+    	// Start add
+        add = new JButton();
+        add = new javax.swing.JButton();
+        add.setText("ADICIONAR");
+        getContentPane().add(add);
+        add.setBounds(130, 363, 110, 40);
+    	// End add
+    	
+    	// Start edit
+        edit = new javax.swing.JButton();
+        edit.setText("EDITAR");
+        getContentPane().add(edit);
+        edit.setBounds(430, 360, 110, 40);
+    	// End edit
+    	
+    	// Start delete
+        delete = new JButton();
+        delete.setText("EXCLUIR");
+        getContentPane().add(delete);
+        delete.setBounds(280, 363, 110, 40);
+    	// End delete
+    	
+    	// Start upper
+        upper = new JSeparator();
+        getContentPane().add(upper);
+        upper.setBounds(100, 30, 730, 10);
+    	// End upper
+    	
+    	// Start upperMinor
+        upperMinor = new JSeparator();
+        getContentPane().add(upperMinor);
+        upperMinor.setBounds(10, 30, 20, 10);
+    	// End upperMinor
+    	
+    	// Start leftSide
+        leftSide = new JSeparator();
+        leftSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(leftSide);
+        leftSide.setBounds(10, 30, 10, 310);
+        // End leftSide
+    	    	
+    	// Start rightSide
+        rightSide = new JSeparator();
+        rightSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(rightSide);
+        rightSide.setBounds(830, 30, 10, 310);
+    	// End rightSide
+    	
+    	// Start bottom
+        bottom = new javax.swing.JSeparator();
+        getContentPane().add(bottom);
+        bottom.setBounds(10, 340, 820, 10);
+    	// End bottom
+    	
+    	// Start text
+        text = new javax.swing.JTextField();
+        getContentPane().add(text);
+        text.setBounds(610, 370, 120, 30);
+    	// End text
+    	
+    	// Start title
+        title = new javax.swing.JLabel();
+        title.setText("GERENTES");
+        getContentPane().add(title);
+        title.setBounds(40, 20, 60, 20);
+    	// End title
+        
+        // Start scrollPanel
+        scrollPanel = new JScrollPane();
+        scrollPanel.setViewportView(tableGerentes);
+        getContentPane().add(scrollPanel);
+        scrollPanel.setBounds(20, 60, 800, 250);
+        // End scrollPanel
+        
+        // Start tableGerentes
+        tableGerentes = new JTable();
 
-        jLabelNomePrincipal.setText("GERENTES");
-        getContentPane().add(jLabelNomePrincipal);
-        jLabelNomePrincipal.setBounds(40, 20, 60, 20);
-
-        jTableTabelaGerentes.setModel(new javax.swing.table.DefaultTableModel(
+        tableGerentes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {1, null, null, null, null, null},
+                {2, null, null, null, null, null},
+                {3, null, null, null, null, null},
+                {4, null, null, null, null, null},
+                {5, null, null, null, null, null},
+                {6, null, null, null, null, null},
+                {7, null, null, null, null, null},
+                {8, null, null, null, null, null},
+                {9, null, null, null, null, null},
+                {10, null, null, null, null, null},
+                {11, null, null, null, null, null},
+                {12, null, null, null, null, null},
+                {13, null, null, null, null, null},
+                {14, null, null, null, null, null},
+                {15, null, null, null, null, null}
             },
             new String [] {
                 "ID", "Nome", "CPF", "Telefone", "E-mail", "Data de Nascimento"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class,
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTableTabelaGerentes);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 60, 800, 250);
-
-        jButtonAdicionar.setText("ADICIONAR");
-        getContentPane().add(jButtonAdicionar);
-        jButtonAdicionar.setBounds(130, 363, 110, 40);
-
-        jButtonExcluir.setText("EXCLUIR");
-        getContentPane().add(jButtonExcluir);
-        jButtonExcluir.setBounds(280, 363, 110, 40);
-
-        jButtonEditar.setText("EDITAR");
-        getContentPane().add(jButtonEditar);
-        jButtonEditar.setBounds(430, 360, 110, 40);
-        getContentPane().add(jTextFieldTexto);
-        jTextFieldTexto.setBounds(610, 370, 120, 30);
-        getContentPane().add(jSeparatorMiniSuperior);
-        jSeparatorMiniSuperior.setBounds(10, 30, 20, 10);
-        getContentPane().add(jSeparatorSuperior);
-        jSeparatorSuperior.setBounds(100, 30, 730, 10);
-
-        jSeparatorLateralEsquerda.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparatorLateralEsquerda);
-        jSeparatorLateralEsquerda.setBounds(10, 30, 10, 310);
-        getContentPane().add(jSeparatorInferior);
-        jSeparatorInferior.setBounds(10, 340, 820, 10);
-
-        jSeparatorLateralDireita.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparatorLateralDireita);
-        jSeparatorLateralDireita.setBounds(830, 30, 10, 310);
-
-        jLabelTelaPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela-princiapal.PNG"))); // NOI18N
-        getContentPane().add(jLabelTelaPrincipal);
-        jLabelTelaPrincipal.setBounds(0, 0, 860, 460);
-
-        pack();
+        // End tableGerentes
+        
+	    // Start logo
+		//        logo = new javax.swing.JLabel();
+		//        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela-princiapal.PNG")));
+		//        getContentPane().add(logo);
+		//        logo.setBounds(0, 0, 860, 460);
+        // End logo
+           
     }                        
 
     
@@ -107,44 +168,30 @@ public class TelaGerente extends javax.swing.JFrame {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("NimbusjButtonAdicionar(info.getName())" != null) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
+                    break; 
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaGerente().setVisible(true);
-            }
-        
-    });
+            
+            TelaGerent tg = new TelaGerent();
+            tg.setLocation(400,200);
+            tg.setSize(300,200);
+            tg.setVisible(true);
+            tg.pack();
+            tg.setDefaultCloseOperation(EXIT_ON_CLOSE);
+     
    }
 
 
 
-    // Variables declaration - do not modify                     
-    private javax.swing.JButton jButtonAdicionar;
-    private javax.swing.JButton jButtonEditar;
-    private javax.swing.JButton jButtonExcluir;
-    private javax.swing.JLabel jLabelNomePrincipal;
-    private javax.swing.JLabel jLabelTelaPrincipal;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparatorInferior;
-    private javax.swing.JSeparator jSeparatorLateralDireita;
-    private javax.swing.JSeparator jSeparatorLateralEsquerda;
-    private javax.swing.JSeparator jSeparatorMiniSuperior;
-    private javax.swing.JSeparator jSeparatorSuperior;
-    private javax.swing.JTable jTableTabelaGerentes;
-    private javax.swing.JTextField jTextFieldTexto;
-    // End of variables declaration                   
+                  
 }
