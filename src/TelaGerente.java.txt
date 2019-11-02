@@ -1,197 +1,174 @@
-// Corrigir ainda 
+// Atualizado 
 
-package test;
+package teste;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JScrollPane;
-import javax.swing.JSeparator;
-import javax.swing.JTable;
-import javax.swing.JTextField;
+import javax.swing.*;
 
-public class TelaGerent extends javax.swing.JFrame {
+public class TelaGerente extends JFrame {
 
-    public TelaGerent() {
+    public TelaGerente() {
         initComponents();
     }
     
-    // Variables declaration   
+ // Variables declaration 
     private JButton add;
-    private JButton edit;
     private JButton delete;
-    
+    private JButton edit;
+    private JLabel text;
+    private JLabel logoLogin;
     private JSeparator upper;
     private JSeparator upperMinor;
     private JSeparator leftSide;
     private JSeparator rightSide;
-    private JSeparator bottom ;
-    
-    private JTextField text;
-    
-    private JLabel title;
-    private JLabel logo;
-    
-    private JScrollPane scrollPanel;
-    private JTable tableGerentes;
-    // End variables declaration 
+    private JSeparator bottom;
+    private JTextField textField;
+    private JScrollPane pane;
+    private JTable tableGerente;
+    // End variables  
 
     @SuppressWarnings("unchecked")
     private void initComponents() {
     	
-    	// Start layout null for background image
+    	// Layout null for background image
         getContentPane().setLayout(null);
-    	// End layout
+    	// End layout 
     	
     	// Start add
-        add = new JButton();
-        add = new javax.swing.JButton();
+    	add = new JButton();
         add.setText("ADICIONAR");
         getContentPane().add(add);
         add.setBounds(130, 363, 110, 40);
     	// End add
-    	
-    	// Start edit
-        edit = new javax.swing.JButton();
-        edit.setText("EDITAR");
-        getContentPane().add(edit);
-        edit.setBounds(430, 360, 110, 40);
-    	// End edit
-    	
-    	// Start delete
+        
+        // Start delete
         delete = new JButton();
         delete.setText("EXCLUIR");
         getContentPane().add(delete);
         delete.setBounds(280, 363, 110, 40);
-    	// End delete
-    	
-    	// Start upper
+        //End delete
+        
+        // Start edit
+        edit = new JButton();
+        edit.setText("EDITAR");
+        getContentPane().add(edit);
+        edit.setBounds(430, 360, 110, 40);
+        // End edit
+        
+        // Start text
+        text = new JLabel();
+        text.setText("GERENTES");
+        getContentPane().add(text);
+        text.setBounds(40, 20, 60, 20);
+        // End text 
+        
+        // Start upper
         upper = new JSeparator();
         getContentPane().add(upper);
         upper.setBounds(100, 30, 730, 10);
-    	// End upper
-    	
-    	// Start upperMinor
-        upperMinor = new JSeparator();
+        // End upper
+        
+        // Start upperMinor
+        upperMinor = new javax.swing.JSeparator();
         getContentPane().add(upperMinor);
         upperMinor.setBounds(10, 30, 20, 10);
-    	// End upperMinor
-    	
-    	// Start leftSide
+        // End upperMinor
+        
+        // Start leftSide
         leftSide = new JSeparator();
         leftSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
         getContentPane().add(leftSide);
         leftSide.setBounds(10, 30, 10, 310);
         // End leftSide
-    	    	
-    	// Start rightSide
+        
+        // Start rightSide
         rightSide = new JSeparator();
         rightSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
         getContentPane().add(rightSide);
         rightSide.setBounds(830, 30, 10, 310);
-    	// End rightSide
-    	
-    	// Start bottom
-        bottom = new javax.swing.JSeparator();
+        // End rightSide
+        
+        // Start bottom
+        bottom = new JSeparator();
         getContentPane().add(bottom);
         bottom.setBounds(10, 340, 820, 10);
-    	// End bottom
-    	
-    	// Start text
-        text = new javax.swing.JTextField();
-        getContentPane().add(text);
-        text.setBounds(610, 370, 120, 30);
-    	// End text
-    	
-    	// Start title
-        title = new javax.swing.JLabel();
-        title.setText("GERENTES");
-        getContentPane().add(title);
-        title.setBounds(40, 20, 60, 20);
-    	// End title
+        // End bottom
         
-        // Start scrollPanel
-        scrollPanel = new JScrollPane();
-        scrollPanel.setViewportView(tableGerentes);
-        getContentPane().add(scrollPanel);
-        scrollPanel.setBounds(20, 60, 800, 250);
-        // End scrollPanel
-        
-        // Start tableGerentes
-        tableGerentes = new JTable();
+        // Start textField
+        textField = new JTextField();
+        getContentPane().add(textField);
+        textField.setBounds(610, 370, 120, 30);
+        // End textField
 
-        tableGerentes.setModel(new javax.swing.table.DefaultTableModel(
+        tableGerente = new JTable();
+
+        tableGerente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {1, null, null, null, null, null},
-                {2, null, null, null, null, null},
-                {3, null, null, null, null, null},
-                {4, null, null, null, null, null},
-                {5, null, null, null, null, null},
-                {6, null, null, null, null, null},
-                {7, null, null, null, null, null},
-                {8, null, null, null, null, null},
-                {9, null, null, null, null, null},
-                {10, null, null, null, null, null},
-                {11, null, null, null, null, null},
-                {12, null, null, null, null, null},
-                {13, null, null, null, null, null},
-                {14, null, null, null, null, null},
-                {15, null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
                 "ID", "Nome", "CPF", "Telefone", "E-mail", "Data de Nascimento"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class,
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        // End tableGerentes
         
-	    // Start logo
-		//        logo = new javax.swing.JLabel();
-		//        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela-princiapal.PNG")));
-		//        getContentPane().add(logo);
-		//        logo.setBounds(0, 0, 860, 460);
-        // End logo
-           
+        // Start pane
+        pane = new JScrollPane();
+        pane.setViewportView(tableGerente);
+        getContentPane().add(pane);
+        pane.setBounds(20, 60, 800, 250);
+        // End pane
+        
+        // Start LogoLogin
+        logoLogin = new JLabel();
+        logoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela-princiapal.PNG"))); // NOI18N
+        getContentPane().add(logoLogin);
+        logoLogin.setBounds(0, 0, 860, 460);
+        // End LogoLogin
     }                        
-
-    
+  
     public static void main(String args[]) {
+    	
+    	TelaGerente tg = new TelaGerente();
+		tg.setVisible(true);
+		tg.setSize(876, 498);
+		tg.setDefaultCloseOperation(EXIT_ON_CLOSE);
         
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("NimbusjButtonAdicionar(info.getName())" != null) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break; 
+                    break;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaGerent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaGerent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaGerent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaGerent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        
-            
-            TelaGerent tg = new TelaGerent();
-            tg.setLocation(400,200);
-            tg.setSize(300,200);
-            tg.setVisible(true);
-            tg.pack();
-            tg.setDefaultCloseOperation(EXIT_ON_CLOSE);
-     
-   }
-
-
-
-                  
+   }                     
 }
