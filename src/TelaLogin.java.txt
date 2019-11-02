@@ -1,132 +1,168 @@
-package Visão;
+package teste;
 
-// import Controller.LoginController;
+import javax.swing.*;
+import javax.swing.table.*;
+import java.awt.*;
+import java.awt.event.*;
 
-public class TelaLogin extends javax.swing.JFrame {
-
-    public TelaLogin() {
+public class TelaLogin extends JFrame implements ActionListener {
+	public TelaLogin() {
         initComponents();
     }
+	
+	 // Start variables  
+	private javax.swing.JLabel jLabelLogoLogin;
+    private JButton close;
+    private JButton access;
+    private JLabel user;
+    private JLabel password;
+    private JLabel text;
+    private JPasswordField userPassword;
+    private JTextField userName;
+    private JSeparator bottom;
+    private JSeparator rightSide;
+    private JSeparator leftSide;
+    private JSeparator upperMinor;
+    private JSeparator upper;    
+    // End variables                 
+
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
-
-        jButtonAcessar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabelUsuario = new javax.swing.JLabel();
-        jTextFieldUsuario = new javax.swing.JTextField();
-        jPasswordFieldSenha = new javax.swing.JPasswordField();
-        jSeparatorSuperior = new javax.swing.JSeparator();
-        jSeparatorLateralDireito = new javax.swing.JSeparator();
-        jLabelTexto = new javax.swing.JLabel();
-        jSeparatorSuperioMenor = new javax.swing.JSeparator();
-        jSeparatorLateralEsquerdo = new javax.swing.JSeparator();
-        jSeparatorInferior = new javax.swing.JSeparator();
-        jLabelLogoLogin = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+    	
+    	// Layout null for background image
         getContentPane().setLayout(null);
+    	// End background 
 
-        jButtonAcessar.setText("ACESSAR");
-        jButtonAcessar.addActionListener(new java.awt.event.ActionListener() {
+    	// Start access
+        access = new JButton();
+        access.setText("ACESSAR");
+        access.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAcessarActionPerformed(evt);
+                accessActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonAcessar);
-        jButtonAcessar.setBounds(130, 190, 80, 30);
-
-        jButton2.setText("SAIR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        getContentPane().add(access);
+        access.setBounds(130, 190, 90, 30);
+        // End access
+        
+        // Start close
+        close = new JButton();
+        close.setText("SAIR");
+        close.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                closeActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(230, 190, 90, 30);
-
-        jLabel2.setText("Senha:");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(120, 90, 40, 14);
-
-        jLabelUsuario.setText("Usuário:");
-        getContentPane().add(jLabelUsuario);
-        jLabelUsuario.setBounds(120, 60, 60, 20);
-        getContentPane().add(jTextFieldUsuario);
-        jTextFieldUsuario.setBounds(180, 60, 150, 20);
-
-        jPasswordFieldSenha.addActionListener(new java.awt.event.ActionListener() {
+        getContentPane().add(close);
+        close.setBounds(230, 190, 90, 30);
+        // End close 
+        
+        // Start user
+        user = new JLabel();
+        user.setText("Usuário:");
+        getContentPane().add(user);
+        user.setBounds(120, 60, 60, 20);
+        // End user
+        
+        // Start password
+        password = new JLabel();
+        password.setText("Senha:");
+        getContentPane().add(password);
+        password.setBounds(120, 90, 40, 14);
+        // End password
+        
+        // Start text
+        text = new JLabel();
+        text.setText("Tela de Login");
+        getContentPane().add(text);
+        text.setBounds(100, 20, 90, 20);
+        // End text
+        
+        // Start userPassword
+        userPassword = new JPasswordField();
+        userPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordFieldSenhaActionPerformed(evt);
+                userPasswordActionPerformed(evt);
             }
         });
-        getContentPane().add(jPasswordFieldSenha);
-        jPasswordFieldSenha.setBounds(180, 90, 150, 20);
-        getContentPane().add(jSeparatorSuperior);
-        jSeparatorSuperior.setBounds(170, 30, 190, 10);
+        getContentPane().add(userPassword);
+        userPassword.setBounds(180, 90, 150, 20);
+        // End userPassword
+        
+        // Start userName
+        userName = new JTextField();
+        getContentPane().add(userName);
+        userName.setBounds(180, 60, 150, 20);
+        // End userName
+        
+        // Start bottom
+        bottom = new JSeparator();
+        getContentPane().add(bottom);
+        bottom.setBounds(70, 160, 290, 10);
+        // End bottom
+        
+        // Start rightSide
+        rightSide = new JSeparator();
+        rightSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(rightSide);
+        rightSide.setBounds(360, 30, 10, 130);
+        // End rightSide
+        
+        // Start leftSide
+        leftSide = new JSeparator();
+        leftSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(leftSide);
+        leftSide.setBounds(70, 30, 20, 130);
+        // End leftSide
+        
+        // Start upperMinor
+        upperMinor = new JSeparator();
+        getContentPane().add(upperMinor);
+        upperMinor.setBounds(70, 30, 30, 10);
+        // End upperMinor
+        
+        // Start upper
+        upper = new JSeparator();
+        getContentPane().add(upper);
+        upper.setBounds(180, 30, 180, 10);
+        // End upper 
 
-        jSeparatorLateralDireito.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparatorLateralDireito);
-        jSeparatorLateralDireito.setBounds(360, 30, 10, 130);
-
-        jLabelTexto.setText("Tela de Login");
-        getContentPane().add(jLabelTexto);
-        jLabelTexto.setBounds(100, 20, 90, 20);
-        getContentPane().add(jSeparatorSuperioMenor);
-        jSeparatorSuperioMenor.setBounds(70, 30, 20, 10);
-
-        jSeparatorLateralEsquerdo.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparatorLateralEsquerdo);
-        jSeparatorLateralEsquerdo.setBounds(70, 30, 20, 130);
-        getContentPane().add(jSeparatorInferior);
-        jSeparatorInferior.setBounds(70, 160, 290, 10);
-
+        // Start LogoLogin
+        jLabelLogoLogin = new JLabel();
         jLabelLogoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/LogoLogin.PNG"))); // NOI18N
         getContentPane().add(jLabelLogoLogin);
         jLabelLogoLogin.setBounds(0, 0, 460, 289);
+        // End LogoLogin
 
-        setSize(new java.awt.Dimension(475, 328));
         setLocationRelativeTo(null);
-    }// </editor-fold>                        
+    }
+    
+    public static void main(String[] args) {
+		TelaLogin tl = new TelaLogin();
+		tl.setVisible(true);
+		tl.setSize(475,328);
+		tl.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}    
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void closeActionPerformed(java.awt.event.ActionEvent evt) {                                         
     }                                        
 
-    private void jPasswordFieldSenhaActionPerformed(java.awt.event.ActionEvent evt) {                                                    
+    private void userPasswordActionPerformed(java.awt.event.ActionEvent evt) {                                                    
         // TODO add your handling code here:
     }                                                   
 
-    private void jButtonAcessarActionPerformed(java.awt.event.ActionEvent evt) {                                               
+    private void accessActionPerformed(java.awt.event.ActionEvent evt) {                                               
         // TODO add your handling code here:
         //LoginController logar = new LoginController();
         //logar.entrarSistema();
     }                                              
 
 
-    public static void main(String args[]) {
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaLogin().setVisible(true);
-            }
-        });
-    }
-
-    // Variables declaration - do not modify                     
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButtonAcessar;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabelLogoLogin;
-    private javax.swing.JLabel jLabelTexto;
-    private javax.swing.JLabel jLabelUsuario;
-    private javax.swing.JPasswordField jPasswordFieldSenha;
-    private javax.swing.JSeparator jSeparatorInferior;
-    private javax.swing.JSeparator jSeparatorLateralDireito;
-    private javax.swing.JSeparator jSeparatorLateralEsquerdo;
-    private javax.swing.JSeparator jSeparatorSuperioMenor;
-    private javax.swing.JSeparator jSeparatorSuperior;
-    private javax.swing.JTextField jTextFieldUsuario;
-    // End of variables declaration                   
 }
