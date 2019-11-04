@@ -1,110 +1,107 @@
-// Mudar nome de todas variaveis em casa
 package Visão;
 
-public class TelaClientes extends javax.swing.JFrame {
+import javax.swing.*;
+import javax.swing.table.*;
+import java.awt.*;
+import java.awt.event.*;
 
+public class TelaClientes extends JFrame implements ActionListener {
 
     public TelaClientes() {
         initComponents();
     }
 
-    // Variables declaration - do not modify
-    private jButton adicionar;
-    private jButton buscar1;
-    private jButton editar;
-    private jButton excluir;
+    // Variables declaration
+    private jButton add;
+    private jButton search;
+    private jButton edit;
+    private jButton delete;
 
-    private JLabel nomeTela;
-    private JLabel label1;
-    private JLabel telaPrincipal;
+    private JLabel title;
 
-    private JTextField buscar;
+    private JTextField text;
 
-    private JSeparator inferior;
-    private JSeparator lateralDireita;
-    private JSeparator lateralEsquerda;
-    private JSeparator miniSuperior;
-    private JSeparator superior;
+    private JSeparator bottom;
+    private JSeparator rigthSide;
+    private JSeparator leftSide;
+    private JSeparator upperMinor;
+    private JSeparator upper;
 
+
+    private JTable tableClientes;
     private JScrollPane jScrollPane1;
 
-    private JTable jTableClientes;
-// End of variables declaration
+    private JLabel telaPrincipal;
 
+// End variables
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
-        
+
         // Start layout for backgroun null
         getContentPane().setLayout(null);
         // End layout
-        
-        // Start adicionar
-        adicionar = new JButton();
-        adicionar.setText("ADICIONAR");
-        getContentPane().add(adicionar);
-        adicionar.setBounds(370, 380, 90, 40);
-        // End adicionar
 
-        // Start buscar
-        buscar = new JButton();
-        buscar.setText("BUSCAR");
-        getContentPane().add(buscar);
-        buscar.setBounds(500, 380, 90, 40);
-        // End buscar
+        // Start add
+        add = new JButton();
+        add.setText("ADICIONAR");
+        getContentPane().add(add);
+        add.setBounds(370, 380, 90, 40);
+        // End add
 
-        // Start editar
-        editar = new JButton();
-        editar.setText("EDITAR");
-        getContentPane().add(editar);
-        editar.setBounds(90, 380, 100, 40);
-        // End editar
+        // Start search
+        search = new JButton();
+        search.setText("BUSCAR");
+        getContentPane().add(search);
+        search.setBounds(500, 380, 90, 40);
+        // End search
 
-        // Start excluir
-        excluir = new JButton();
-        excluir.setText("EXCLUIR");
-        getContentPane().add(excluir);
-        excluir.setBounds(230, 380, 90, 40)
-        // End excluir
+        // Start edit
+        edit = new JButton();
+        edit.setText("EDITAR");
+        getContentPane().add(edit);
+        edit.setBounds(90, 380, 100, 40);
+        // End edit
 
-        // Start nomeTela
-        nomeTela = new JLabel();
-        nomeTela.setText("CLIENTES");
-        getContentPane().add(nomeTela);
-        nomeTela.setBounds(40, 20, 60, 20);
-        // End nomeTela
+        // Start delete
+        delete = new JButton();
+        delete.setText("EXCLUIR");
+        getContentPane().add(delete);
+        delete.setBounds(230, 380, 90, 40)
+        // End delete
 
-        // Start jLabel1
-        jLabel1 = new JLabel();
-        jLabel1.setText("jLabel1");
-        // End jLabel1
+        // Start title
+        title = new JLabel();
+        title.setText("CLIENTES");
+        getContentPane().add(title);
+        title.setBounds(40, 20, 60, 20);
+        // End title
 
-        // Start buscar
-        buscar = new JTextField();
-        getContentPane().add(buscar);
-        buscar.setBounds(610, 390, 180, 30);
-        // End buscar
+        // Start text
+        text = new JTextField();
+        getContentPane().add(text);
+        text.setBounds(610, 390, 180, 30);
+        // End text
 
-        // Start inferior
-        inferior = new JSeparator();
-        getContentPane().add(inferior);
-        inferior.setBounds(20, 360, 830, 20);
-        // End inferior
+        // Start bottom
+        bottom = new JSeparator();
+        getContentPane().add(bottom);
+        bottom.setBounds(20, 360, 830, 20);
+        // End bottom
 
-        // Start lateralDireita
-        lateralDireita = new JSeparator();
-        lateralDireita.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(lateralDireita);
-        lateralDireita.setBounds(850, 30, 10, 330);
-        // End lateralDireita
+        // Start rigthSide
+        rigthSide = new JSeparator();
+        rigthSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(rigthSide);
+        rigthSide.setBounds(850, 30, 10, 330);
+        // End rigthSide
 
-        // Start lateralEsquerda
-        lateralEsquerda = JSeparator();
-        lateralEsquerda.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(lateralEsquerda);
-        lateralEsquerda.setBounds(20, 30, 10, 330);
-        // End lateralEsquerda
+        // Start leftSide
+        leftSide = JSeparator();
+        leftSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(leftSide);
+        leftSide.setBounds(20, 30, 10, 330);
+        // End leftSide
 
         // Start telaPrincipal
         telaPrincipal = new JLabel();
@@ -114,35 +111,27 @@ public class TelaClientes extends javax.swing.JFrame {
         telaPrincipal.setBounds(0, 0, 860, 458);
         // End telaPrincipal
 
-        // start miniSuperior
-        miniSuperior = new JSeparator();
-        getContentPane().add(miniSuperior);
-        miniSuperior.setBounds(20, 30, 10, 10);
-        // End miniSuperior
+        // start upperMinor
+        upperMinor = new JSeparator();
+        getContentPane().add(upperMinor);
+        upperMinor.setBounds(20, 30, 10, 10);
+        // End upperMinor
 
-        // Start superior
-        superior = new JSeparator();
-        getContentPane().add(superior);
-        superior.setBounds(90, 30, 760, 10);
-        // End superior
+        // Start upper
+        upper = new JSeparator();
+        getContentPane().add(upper);
+        upper.setBounds(90, 30, 760, 10);
+        // End upper
 
-        // Start jScrollPane1
-        jScrollPane1 = new JScrollPane();
-        jScrollPane1.setViewportView(jTableClientes);
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(60, 60, 750, 280);
-        // End jScrollPane1
 
-        // Start 
-        jTableClientes = new JTable();
-        jLabeNomeTela.setText("CLIENTES");
-        getContentPane().add(jLabeNomeTela);
-        jLabeNomeTela.setBounds(40, 20, 60, 20);
-        // End
-        
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTableClientes.setModel(new javax.swing.table.DefaultTableModel(
+        // Start tableClientes
+        tableClientes = new JTable();
+        getContentPane().add(tableClientes);
+
+
+
+        tableClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
             {null, null, null, null, null},
             {null, null, null, null, null},
@@ -175,41 +164,50 @@ public class TelaClientes extends javax.swing.JFrame {
             "ID", "Nome", "CPF", "Telefone", "Data de Nascimento"
         }
     ));
-        
+        // End
 
-        ;
+        // Start jScrollPane1
+        jScrollPane1 = new JScrollPane();
+        jScrollPane1.setViewportView(jTableClientes);
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(60, 60, 750, 280);
+        // End jScrollPane1
 
-        
 
-        pack();
     }
-
 
     public static void main(String args[]) {
-        
 
-    try {
-    for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-    if ("Nimbus".equals(info.getName())) {
-    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-    break;
-}
-}
-} catch (ClassNotFoundException ex) {
-    java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-} catch (InstantiationException ex) {
-    java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-} catch (IllegalAccessException ex) {
-    java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-} catch (javax.swing.UnsupportedLookAndFeelException ex) {
-    java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    TelaClientes tc = new TelaClientes();
+    tc.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    tc.pack();
+    tc.setSize(876, 498);
+    tc.setVisible(true);
+
+//     try {
+//     for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//     if ("Nimbus".equals(info.getName())) {
+//     javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//     break;
+// }
+// }
+// } catch (ClassNotFoundException ex) {
+//     java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+// } catch (InstantiationException ex) {
+//     java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+// } catch (IllegalAccessException ex) {
+//     java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+// } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//     java.util.logging.Logger.getLogger(TelaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+// }
+
+
 }
 
-java.awt.EventQueue.invokeLater(new Runnable() {
-    public void run() {
-        new TelaClientes().setVisible(true);
-    }
-});
+@Override
+public void actionPerformed(ActionEvent e) {
+    // TODO Auto-generated method stub
+
 }
 
 }
