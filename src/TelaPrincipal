@@ -1,129 +1,181 @@
 package teste;
 
-public class TelaPrincipal extends javax.swing.JFrame {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
 
+public class TelaPrincipal extends JFrame implements ActionListener{
+	
+    // Variables declaration - do not modify  
+	private JButton product;
+	private JButton client;
+	private JButton manager;
+	private JButton sales;
+	private JButton sector;
+	private JButton salesman;
+	
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    
+    private javax.swing.JFrame jFrame1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabelImgCliente;
+    private javax.swing.JLabel jLabelImgGerente;
+    private javax.swing.JLabel jLabelImgProdutos;
+    private javax.swing.JLabel jLabelProdutos;
+    private javax.swing.JLabel jLabelTelaPrincipal;
+    private javax.swing.JSeparator jSeparator1;
+    // End of variables declaration  
 
     public TelaPrincipal() {
         initComponents();
     }
 
-
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
-
-        jLabelImgProdutos = new javax.swing.JLabel();
-        jLabelImgGerente = new javax.swing.JLabel();
-        jLabelImgCliente = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jFrame1 = new javax.swing.JFrame();
-        jLabelProdutos = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabelTelaPrincipal = new javax.swing.JLabel();
-
-        jLabelImgProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Produtos.png"))); // NOI18N
-
-        jLabelImgGerente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Gerente.png"))); // NOI18N
-
-        jLabelImgCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Clientes.png"))); // NOI18N
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Produtos.png"))); // NOI18N
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+    	
+    	// Home layout null for background image
         getContentPane().setLayout(null);
-
-        jLabelProdutos.setText("GERENTES");
-        getContentPane().add(jLabelProdutos);
-        jLabelProdutos.setBounds(760, 140, 80, 14);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Logo-ares.jpeg"))); // NOI18N
+    	// End layout
+    	
+    	// Home
+        jLabel2 = new javax.swing.JLabel();
+//      jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Logo-ares.jpeg"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(-100, 10, 380, 120);
-
-        jLabel1.setText("CLIENTES");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(610, 140, 80, 14);
-
-        jLabel3.setText("PRODUTOS");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(460, 140, 80, 20);
-
-        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(440, 80, 10, 220);
-
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/waiter.png"))); // NOI18N
-        jButton1.setSelected(true);
-        getContentPane().add(jButton1);
-        jButton1.setBounds(760, 210, 60, 50);
-
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Gerente.png"))); // NOI18N
-        jButton3.setSelected(true);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(760, 80, 60, 50);
-
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Clientes.png"))); // NOI18N
-        jButton4.setSelected(true);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(620, 80, 60, 50);
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Produtos.png"))); // NOI18N
-        jButton2.setSelected(true);
-        getContentPane().add(jButton2);
-        jButton2.setBounds(470, 80, 60, 50);
-
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/hand.png"))); // NOI18N
-        jButton5.setSelected(true);
-        getContentPane().add(jButton5);
-        jButton5.setBounds(470, 210, 60, 50);
-
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/product.png"))); // NOI18N
-        jButton6.setSelected(true);
-        getContentPane().add(jButton6);
-        jButton6.setBounds(620, 210, 60, 50);
-
+    	// End 
+        
+    	// Home
+        jLabel5 = new javax.swing.JLabel();
         jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel5.setText("Usuário: pauloglata");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(50, 220, 150, 30);
-
+    	// End 
+        
+    	// Home
+        jLabel6 = new javax.swing.JLabel();
         jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel6.setText("Gerente de vendas");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(50, 250, 160, 30);
-
+    	// End
+        
+    	
+    	// Home
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(440, 80, 10, 220);
+    	// End 
+    	
+    	// Home product
+    	product = new javax.swing.JButton();
+//      product.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Produtos.png"))); // NOI18N
+    	product.setSelected(true);
+    	getContentPane().add(product);
+    	product.setBounds(470, 80, 60, 50);
+    	// End product
+    	
+    	// Home
+        jLabel3 = new javax.swing.JLabel();
+        jLabel3.setText("PRODUTOS");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(460, 140, 80, 20);
+    	// End 
+    	
+    	// Home client
+    	client = new javax.swing.JButton();
+//      client.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Clientes.png"))); // NOI18N
+    	client.setSelected(true);
+        getContentPane().add(client);
+        client.setBounds(620, 80, 60, 50);
+    	// End client
+        
+        // Home
+        jLabel1 = new javax.swing.JLabel();
+        jLabel1.setText("CLIENTES");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(610, 140, 80, 14);
+        // End
+    	
+    	// Home manager
+        manager = new javax.swing.JButton();
+//      manager.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Gerente.png"))); // NOI18N
+        manager.setSelected(true);
+        getContentPane().add(manager);
+        manager.setBounds(760, 80, 60, 50);
+    	// End manager
+        
+        // Home
+        jLabelProdutos = new javax.swing.JLabel();
+        jLabelProdutos.setText("GERENTES");
+        getContentPane().add(jLabelProdutos);
+        jLabelProdutos.setBounds(760, 140, 80, 14);
+        // End
+    	
+    	// Home
+        jButton1 = new javax.swing.JButton();
+//      jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/waiter.png"))); // NOI18N
+        jButton1.setSelected(true);
+        getContentPane().add(jButton1);
+        jButton1.setBounds(760, 210, 60, 50);
+    	// End 
+    	
+    	// Home
+        jButton5 = new javax.swing.JButton();
+//      jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/hand.png"))); // NOI18N
+        jButton5.setSelected(true);
+        getContentPane().add(jButton5);
+        jButton5.setBounds(470, 210, 60, 50);
+    	// End 
+    	
+    	// Home
+        jButton6 = new javax.swing.JButton();
+//      jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/product.png"))); // NOI18N
+        jButton6.setSelected(true);
+        getContentPane().add(jButton6);
+        jButton6.setBounds(620, 210, 60, 50);
+    	// End 
+        
+    	// Home
+        jLabel7 = new javax.swing.JLabel();
         jLabel7.setText("@ares 2019");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(800, 390, 70, 14);
+    	// End 
+        
+    	// Home
+        jLabelTelaPrincipal = new javax.swing.JLabel();
+//      jLabelTelaPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela-princiapal.PNG"))); // NOI18N
+      getContentPane().add(jLabelTelaPrincipal);
+      jLabelTelaPrincipal.setBounds(0, -30, 900, 470);
+    	// End 
+      
 
-        jLabelTelaPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela-princiapal.PNG"))); // NOI18N
-        getContentPane().add(jLabelTelaPrincipal);
-        jLabelTelaPrincipal.setBounds(0, -30, 900, 470);
+      client.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(java.awt.event.ActionEvent evt) {
+              jButton4ActionPerformed(evt);
+          }
+      });
+      
+      manager.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(java.awt.event.ActionEvent evt) {
+              jButton3ActionPerformed(evt);
+          }
+        });
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(913, 478));
         setLocationRelativeTo(null);
+        
     }// </editor-fold>                        
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
@@ -134,13 +186,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }                                        
 
-
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -157,36 +204,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaPrincipal().setVisible(true);
             }
         });
     }
-
-    // Variables declaration - do not modify                     
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JFrame jFrame1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabelImgCliente;
-    private javax.swing.JLabel jLabelImgGerente;
-    private javax.swing.JLabel jLabelImgProdutos;
-    private javax.swing.JLabel jLabelProdutos;
-    private javax.swing.JLabel jLabelTelaPrincipal;
-    private javax.swing.JSeparator jSeparator1;
-    // End of variables declaration                   
+                 
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 }
